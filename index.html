@@ -66,20 +66,20 @@
 
         /* Summary Tiles */
         .summary-tiles {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 10px; margin-bottom: 32px;
+            display: flex; gap: 8px; margin-bottom: 32px;
         }
         .summary-tile {
+            flex: 1 1 0; min-width: 0;
             background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-            padding: 14px 12px; cursor: pointer; transition: all 0.15s;
-            text-decoration: none; display: block; color: var(--text);
+            padding: 10px 6px; cursor: pointer; transition: all 0.15s;
+            text-decoration: none; display: block; color: var(--text); overflow: hidden;
         }
         .summary-tile:visited { color: var(--text); }
         .summary-tile:hover { border-color: var(--accent); background: var(--hover); transform: translateY(-2px); }
-        .summary-tile-icon { font-size: 20px; margin-bottom: 6px; }
-        .summary-tile-title { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-        .summary-tile-stat { font-size: 14px; font-weight: 800; margin-bottom: 2px; }
-        .summary-tile-sub { font-size: 10px; color: var(--muted); }
+        .summary-tile-icon { font-size: 16px; margin-bottom: 4px; }
+        .summary-tile-title { font-size: 10px; font-weight: 600; color: #fff; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .summary-tile-stat { font-size: 13px; font-weight: 800; margin-bottom: 2px; white-space: nowrap; }
+        .summary-tile-sub { font-size: 9px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-bottom: 32px; }

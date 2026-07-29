@@ -53,16 +53,16 @@
 
         /* KPI Strip */
         .kpi-strip {
-            display: grid; grid-template-columns: repeat(8, 1fr);
-            gap: 10px; margin-bottom: 32px;
+            display: flex; gap: 10px; margin-bottom: 32px;
         }
         .kpi-card {
+            flex: 1 1 0; min-width: 0;
             background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-            padding: 12px 8px; text-align: center; min-width: 0; overflow: hidden;
+            padding: 12px 6px; text-align: center; overflow: hidden;
         }
-        .kpi-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
-        .kpi-value { font-size: 20px; font-weight: 800; }
-        .kpi-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+        .kpi-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .kpi-value { font-size: 20px; font-weight: 800; white-space: nowrap; }
+        .kpi-sub { font-size: 9px; color: var(--muted); margin-top: 2px; }
 
         /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-bottom: 32px; }
@@ -209,12 +209,10 @@
         /* Probability movers */
         .movers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
 
-        @media (max-width: 1200px) {
-            .kpi-strip { grid-template-columns: repeat(4, 1fr); }
-        }
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
-            .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+            .kpi-strip { flex-wrap: wrap; }
+            .kpi-card { flex: 1 1 calc(25% - 10px); }
             .header { flex-direction: column; }
             .movers-grid { grid-template-columns: 1fr; }
         }
@@ -278,12 +276,12 @@
         <div class="kpi-card">
             <div class="kpi-label">CET1 Ratio</div>
             <div class="kpi-value" style="color:var(--accent);">10.3%</div>
-            <div class="kpi-sub">Target ~10.5%, Basel III final</div>
+            <div class="kpi-sub">Target ~10.5%</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">Buyback (3/27)</div>
             <div class="kpi-value" style="color:var(--accent);">&yen;180bn</div>
-            <div class="kpi-sub">vs &yen;250bn in 3/26 &mdash; top-up likely</div>
+            <div class="kpi-sub">Top-up likely at H1</div>
         </div>
     </div>
 

@@ -688,66 +688,6 @@
         </div>
     </div>
 
-    <!-- MONITORING CHECKLIST -->
-    <div class="card card-full">
-        <h2><span class="icon">&#9745;</span> Monitoring Checklist</h2>
-        <ul class="checklist" id="checklist">
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check BOJ policy rate decision and Ueda press conference commentary</div>
-                <span class="check-freq">Each meeting</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check <a href="https://www.smfg.co.jp/english/investor/" target="_blank">SMFG IR page</a> for earnings releases, presentations, buyback progress</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check SMFG share price and P/TBV vs MUFG and Mizuho &mdash; watch for relative de-rating</div>
-                <span class="check-freq">Weekly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check Olive account numbers and profitability in quarterly supplements</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check credit cost trends &mdash; Asian consumer NPLs, Middle East provisions, private credit</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check JGB portfolio duration and unrealised gains/losses in financial supplement</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check Jefferies financial results and any SMFG stake-increase announcements</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check Middle East geopolitical developments &mdash; Iran, oil prices, SMFG exposure commentary</div>
-                <span class="check-freq">Weekly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check yen/USD and yen/EUR direction &mdash; sharp yen appreciation = overseas earnings headwind</div>
-                <span class="check-freq">Weekly</span>
-            </li>
-            <li>
-                <div class="check-box" onclick="toggleCheck(this)"></div>
-                <div class="check-label">Check deposit beta commentary from megabank peers &mdash; competitive pass-through pressure</div>
-                <span class="check-freq">Quarterly</span>
-            </li>
-        </ul>
-        <div style="margin-top: 16px;">
-            <button onclick="resetChecklist()" style="background:var(--gold); color:#000; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; font-size:13px; font-weight:600;">Reset All</button>
-        </div>
-    </div>
-
     <!-- SOURCE LINKS -->
     <div class="card card-full">
         <h2><span class="icon">&#128279;</span> Source Links</h2>
@@ -783,44 +723,6 @@
 
 </div>
 
-<script>
-function toggleCheck(el) {
-    el.classList.toggle('checked');
-    el.nextElementSibling.classList.toggle('done');
-    saveChecklist();
-}
-
-function saveChecklist() {
-    const items = document.querySelectorAll('#checklist .check-box');
-    const state = Array.from(items).map(el => el.classList.contains('checked'));
-    localStorage.setItem('smfg-checklist', JSON.stringify(state));
-}
-
-function loadChecklist() {
-    const saved = localStorage.getItem('smfg-checklist');
-    if (saved) {
-        const state = JSON.parse(saved);
-        const items = document.querySelectorAll('#checklist .check-box');
-        items.forEach((el, i) => {
-            if (state[i]) {
-                el.classList.add('checked');
-                el.nextElementSibling.classList.add('done');
-            }
-        });
-    }
-}
-
-function resetChecklist() {
-    const items = document.querySelectorAll('#checklist .check-box');
-    items.forEach(el => {
-        el.classList.remove('checked');
-        el.nextElementSibling.classList.remove('done');
-    });
-    localStorage.removeItem('smfg-checklist');
-}
-
-loadChecklist();
-</script>
 
 </body>
 </html>

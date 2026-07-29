@@ -72,8 +72,9 @@
         .summary-tile {
             background: var(--card); border: 1px solid var(--border); border-radius: 10px;
             padding: 14px 12px; cursor: pointer; transition: all 0.15s;
-            text-decoration: none; display: block;
+            text-decoration: none; display: block; color: var(--text);
         }
+        .summary-tile:visited { color: var(--text); }
         .summary-tile:hover { border-color: var(--accent); background: var(--hover); transform: translateY(-2px); }
         .summary-tile-icon { font-size: 20px; margin-bottom: 6px; }
         .summary-tile-title { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; }

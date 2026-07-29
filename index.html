@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +64,25 @@
         .kpi-value { font-size: 20px; font-weight: 800; white-space: nowrap; }
         .kpi-sub { font-size: 9px; color: var(--muted); margin-top: 2px; }
 
+        /* Summary Tiles */
+        .summary-tiles {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px; margin-bottom: 32px;
+        }
+        .summary-tile {
+            background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+            padding: 14px 12px; cursor: pointer; transition: all 0.15s;
+            text-decoration: none; display: block;
+        }
+        .summary-tile:hover { border-color: var(--accent); background: var(--hover); transform: translateY(-2px); }
+        .summary-tile-icon { font-size: 20px; margin-bottom: 6px; }
+        .summary-tile-title { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+        .summary-tile-stat { font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+        .summary-tile-sub { font-size: 10px; color: var(--muted); }
+
         /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-bottom: 32px; }
+        .card { scroll-margin-top: 24px; }
 
         /* Cards */
         .card {
@@ -285,12 +302,88 @@
         </div>
     </div>
 
-    <!-- MONITORING DASHBOARD -->
-    <h2 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:20px;">Monitoring Dashboard</h2>
+    <!-- SUMMARY TILES -->
+    <h2 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:16px;">Monitoring Dashboard</h2>
+    <div class="summary-tiles">
+        <a href="#boj" class="summary-tile">
+            <div class="summary-tile-icon">&#127980;</div>
+            <div class="summary-tile-title">BOJ Rate Sensitivity</div>
+            <div class="summary-tile-stat" style="color:var(--accent2);">+&yen;110bn</div>
+            <div class="summary-tile-sub">Per +25bp hike</div>
+        </a>
+        <a href="#returns" class="summary-tile">
+            <div class="summary-tile-icon">&#128176;</div>
+            <div class="summary-tile-title">Shareholder Returns</div>
+            <div class="summary-tile-stat" style="color:var(--gold);">&yen;180 + &yen;180bn</div>
+            <div class="summary-tile-sub">DPS + buyback</div>
+        </a>
+        <a href="#loans" class="summary-tile">
+            <div class="summary-tile-icon">&#128200;</div>
+            <div class="summary-tile-title">Loan Growth</div>
+            <div class="summary-tile-stat" style="color:var(--accent2);">~10% CAGR</div>
+            <div class="summary-tile-sub">Spread bottomed at 54bp</div>
+        </a>
+        <a href="#credit" class="summary-tile">
+            <div class="summary-tile-icon">&#9888;</div>
+            <div class="summary-tile-title">Credit Costs</div>
+            <div class="summary-tile-stat" style="color:var(--danger);">&yen;340bn</div>
+            <div class="summary-tile-sub">ME &yen;165bn provisioned</div>
+        </a>
+        <a href="#deposits" class="summary-tile">
+            <div class="summary-tile-icon">&#127974;</div>
+            <div class="summary-tile-title">Deposits</div>
+            <div class="summary-tile-stat" style="color:var(--accent2);">+&yen;7tn</div>
+            <div class="summary-tile-sub">Target, Q1 ahead</div>
+        </a>
+        <a href="#olive" class="summary-tile">
+            <div class="summary-tile-icon">&#128241;</div>
+            <div class="summary-tile-title">Olive Digital</div>
+            <div class="summary-tile-stat" style="color:var(--gold);">7.5m</div>
+            <div class="summary-tile-sub">Accounts &rarr; 15m target</div>
+        </a>
+        <a href="#securities" class="summary-tile">
+            <div class="summary-tile-icon">&#128203;</div>
+            <div class="summary-tile-title">Securities</div>
+            <div class="summary-tile-stat" style="color:var(--warn);">3.9yr</div>
+            <div class="summary-tile-sub">Duration (from 1.0yr)</div>
+        </a>
+        <a href="#capital" class="summary-tile">
+            <div class="summary-tile-icon">&#127975;</div>
+            <div class="summary-tile-title">Capital</div>
+            <div class="summary-tile-stat" style="color:var(--accent);">10.3%</div>
+            <div class="summary-tile-sub">CET1, target ~10.5%</div>
+        </a>
+        <a href="#jefferies" class="summary-tile">
+            <div class="summary-tile-icon">&#127758;</div>
+            <div class="summary-tile-title">Jefferies</div>
+            <div class="summary-tile-stat" style="color:var(--accent);">20%</div>
+            <div class="summary-tile-sub">Stake, full ownership aim</div>
+        </a>
+        <a href="#aviation" class="summary-tile">
+            <div class="summary-tile-icon">&#9992;</div>
+            <div class="summary-tile-title">SMBCAC / Avolon</div>
+            <div class="summary-tile-stat" style="color:var(--accent);">Scale</div>
+            <div class="summary-tile-sub">Further M&amp;A possible</div>
+        </a>
+        <a href="#macro" class="summary-tile">
+            <div class="summary-tile-icon">&#127757;</div>
+            <div class="summary-tile-title">Macro / Geopolitical</div>
+            <div class="summary-tile-stat" style="color:var(--warn);">Mixed</div>
+            <div class="summary-tile-sub">ME risk, tariff non-event</div>
+        </a>
+        <a href="#valuation" class="summary-tile">
+            <div class="summary-tile-icon">&#128178;</div>
+            <div class="summary-tile-title">Valuation</div>
+            <div class="summary-tile-stat" style="color:var(--warn);">1.8x P/TBV</div>
+            <div class="summary-tile-sub">Rich &mdash; HOLD</div>
+        </a>
+    </div>
+
+    <!-- MONITORING DASHBOARD DETAIL -->
     <div class="grid">
 
         <!-- BOJ Rate Sensitivity -->
-        <div class="card">
+        <div class="card" id="boj">
             <h2><span class="icon">&#127980;</span> BOJ Rate Sensitivity <span class="card-badge badge-bullish">TAILWIND</span></h2>
             <div class="card-content">
                 <ul>
@@ -311,7 +404,7 @@
         </div>
 
         <!-- Shareholder Returns -->
-        <div class="card">
+        <div class="card" id="returns">
             <h2><span class="icon">&#128176;</span> Shareholder Returns <span class="card-badge badge-watching">WATCHING</span></h2>
             <div class="card-content">
                 <ul>
@@ -327,7 +420,7 @@
         </div>
 
         <!-- Loan Growth & Spreads -->
-        <div class="card">
+        <div class="card" id="loans">
             <h2><span class="icon">&#128200;</span> Loan Growth &amp; Spreads <span class="card-badge badge-bullish">POSITIVE</span></h2>
             <div class="card-content">
                 <ul>
@@ -343,7 +436,7 @@
         </div>
 
         <!-- Credit Costs -->
-        <div class="card">
+        <div class="card" id="credit">
             <h2><span class="icon">&#9888;</span> Credit Costs <span class="card-badge badge-risk">RISK</span></h2>
             <div class="card-content">
                 <ul>
@@ -359,7 +452,7 @@
         </div>
 
         <!-- Deposits -->
-        <div class="card">
+        <div class="card" id="deposits">
             <h2><span class="icon">&#127974;</span> Deposits <span class="card-badge badge-bullish">POSITIVE</span></h2>
             <div class="card-content">
                 <ul>
@@ -375,7 +468,7 @@
         </div>
 
         <!-- Olive Digital Banking -->
-        <div class="card">
+        <div class="card" id="olive">
             <h2><span class="icon">&#128241;</span> Olive (Digital Banking) <span class="card-badge badge-watching">SCALING</span></h2>
             <div class="card-content">
                 <ul>
@@ -390,7 +483,7 @@
         </div>
 
         <!-- Securities Portfolio -->
-        <div class="card">
+        <div class="card" id="securities">
             <h2><span class="icon">&#128203;</span> Securities Portfolio <span class="card-badge badge-watching">DURATION BET</span></h2>
             <div class="card-content">
                 <ul>
@@ -406,7 +499,7 @@
         </div>
 
         <!-- Capital & RWAs -->
-        <div class="card">
+        <div class="card" id="capital">
             <h2><span class="icon">&#127975;</span> Capital &amp; Allocation <span class="card-badge badge-info">ADEQUATE</span></h2>
             <div class="card-content">
                 <ul>
@@ -421,7 +514,7 @@
         </div>
 
         <!-- Jefferies -->
-        <div class="card">
+        <div class="card" id="jefferies">
             <h2><span class="icon">&#127758;</span> Jefferies Partnership <span class="card-badge badge-info">LONG-TERM</span></h2>
             <div class="card-content">
                 <ul>
@@ -436,7 +529,7 @@
         </div>
 
         <!-- Aviation Leasing -->
-        <div class="card">
+        <div class="card" id="aviation">
             <h2><span class="icon">&#9992;</span> SMBCAC / Avolon <span class="card-badge badge-info">STRATEGIC</span></h2>
             <div class="card-content">
                 <ul>
@@ -450,7 +543,7 @@
         </div>
 
         <!-- Macro / Geopolitical -->
-        <div class="card">
+        <div class="card" id="macro">
             <h2><span class="icon">&#127757;</span> Macro / Geopolitical <span class="card-badge badge-watching">WATCHING</span></h2>
             <div class="card-content">
                 <ul>
@@ -465,7 +558,7 @@
         </div>
 
         <!-- Valuation -->
-        <div class="card">
+        <div class="card" id="valuation">
             <h2><span class="icon">&#128178;</span> Valuation <span class="card-badge badge-hold">HOLD</span></h2>
             <div class="card-content">
                 <ul>

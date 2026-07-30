@@ -263,11 +263,53 @@
         .card.highlight { animation: card-highlight 1.5s ease-out; }
 
         @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            .kpi-strip { flex-wrap: wrap; }
-            .kpi-card { flex: 1 1 calc(25% - 10px); }
+            .container { padding: 12px; }
             .header { flex-direction: column; }
+            .header h1 { font-size: 20px; }
+            .header-subtitle { font-size: 12px; }
+            .header-right { width: 100%; }
+            .header-right .last-checked { flex: 1; text-align: center; padding: 8px 12px; }
+
+            .thesis-banner { padding: 14px 16px; }
+            .thesis-title { font-size: 15px; }
+            .thesis-body { font-size: 12px; }
+
+            .changelog { padding: 16px; }
+            .changelog h2 { font-size: 14px; flex-wrap: wrap; }
+            .changelog-item { flex-direction: column; gap: 4px; }
+            .changelog-tag { align-self: flex-start; }
+            .changelog-desc { font-size: 12px; }
+
+            .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+            .kpi-card { padding: 8px 4px; }
+            .kpi-label { font-size: 8px; }
+            .kpi-value { font-size: 14px; }
+            .kpi-sub { font-size: 8px; }
+
+            .summary-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .summary-tile { padding: 8px 4px; }
+            .summary-tile-icon { font-size: 14px; }
+            .summary-tile-title { font-size: 8px; }
+            .summary-tile-stat { font-size: 11px; }
+            .summary-tile-sub { font-size: 8px; }
+
+            .grid { grid-template-columns: 1fr; gap: 16px; }
+            .card { padding: 16px; }
+            .card h2 { font-size: 14px; flex-wrap: wrap; gap: 6px; }
+            .card-content { font-size: 13px; }
+            .card-content li { font-size: 12px; padding-left: 14px; }
+
+            .sens-table th, .sens-table td { padding: 6px 4px; font-size: 11px; }
+            .data-table th, .data-table td { padding: 8px 6px; font-size: 12px; }
+
+            .catalyst-item { flex-direction: column; gap: 6px; padding: 10px 0; }
+            .catalyst-date { min-width: unset; font-size: 12px; }
+            .catalyst-desc { font-size: 13px; }
+
+            .source-grid { grid-template-columns: 1fr; }
             .movers-grid { grid-template-columns: 1fr; }
+
+            .checklist li { font-size: 13px; }
         }
     </style>
 </head>

@@ -59,7 +59,10 @@
             flex: 1 1 0; min-width: 0;
             background: var(--card); border: 1px solid var(--border); border-radius: 10px;
             padding: 12px 6px; text-align: center; overflow: hidden;
+            cursor: pointer; transition: all 0.15s; text-decoration: none; display: block; color: var(--text);
         }
+        .kpi-card:visited { color: var(--text); }
+        .kpi-card:hover { border-color: var(--accent); background: var(--hover); transform: translateY(-2px); }
         .kpi-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .kpi-value { font-size: 20px; font-weight: 800; white-space: nowrap; }
         .kpi-sub { font-size: 9px; color: var(--muted); margin-top: 2px; }
@@ -227,6 +230,13 @@
         /* Probability movers */
         .movers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
 
+        @keyframes card-highlight {
+            0% { border-color: var(--accent); box-shadow: 0 0 0 0 rgba(79,140,255,0.4); }
+            50% { border-color: var(--accent); box-shadow: 0 0 16px 4px rgba(79,140,255,0.25); }
+            100% { border-color: var(--border); box-shadow: none; }
+        }
+        .card.highlight { animation: card-highlight 1.5s ease-out; }
+
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
             .kpi-strip { flex-wrap: wrap; }
@@ -260,47 +270,48 @@
     </div>
 
     <!-- KPI STRIP -->
+    <h2 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:16px;">Key Metrics</h2>
     <div class="kpi-strip">
-        <div class="kpi-card">
+        <a href="#valuation" class="kpi-card">
             <div class="kpi-label">Net Income Target</div>
             <div class="kpi-value" style="color:var(--accent2);">&yen;1.7tn</div>
             <div class="kpi-sub">FY to 3/27 &mdash; upgrade likely at H1</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#valuation" class="kpi-card">
             <div class="kpi-label">ROE</div>
             <div class="kpi-value" style="color:var(--accent2);">10%</div>
             <div class="kpi-sub">Record level, target 15% domestic</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#valuation" class="kpi-card">
             <div class="kpi-label">EPS (3/26)</div>
             <div class="kpi-value" style="color:var(--accent2);">&yen;412</div>
             <div class="kpi-sub">Record &mdash; all-time high</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#returns" class="kpi-card">
             <div class="kpi-label">Dividend</div>
             <div class="kpi-value" style="color:var(--gold);">&yen;180</div>
             <div class="kpi-sub">40% payout ratio, to 3/27</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#valuation" class="kpi-card">
             <div class="kpi-label">P/TBV</div>
             <div class="kpi-value" style="color:var(--warn);">1.8x</div>
             <div class="kpi-sub">Elevated for Japan megabank</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#valuation" class="kpi-card">
             <div class="kpi-label">P/E (3/27E)</div>
             <div class="kpi-value" style="color:var(--warn);">15x</div>
             <div class="kpi-sub">Prices in significant momentum</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#capital" class="kpi-card">
             <div class="kpi-label">CET1 Ratio</div>
             <div class="kpi-value" style="color:var(--accent);">10.3%</div>
             <div class="kpi-sub">Target ~10.5%</div>
-        </div>
-        <div class="kpi-card">
+        </a>
+        <a href="#returns" class="kpi-card">
             <div class="kpi-label">Buyback (3/27)</div>
             <div class="kpi-value" style="color:var(--accent);">&yen;180bn</div>
             <div class="kpi-sub">Top-up likely at H1</div>
-        </div>
+        </a>
     </div>
 
     <!-- SUMMARY TILES -->
@@ -817,6 +828,31 @@
 
 </div>
 
+<script>
+function highlightCard(id) {
+    document.querySelectorAll('.card.highlight').forEach(function(el) {
+        el.classList.remove('highlight');
+    });
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.classList.contains('card')) {
+        void el.offsetWidth;
+        el.classList.add('highlight');
+    }
+}
+document.querySelectorAll('.kpi-card[href], .summary-tile[href]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        var id = this.getAttribute('href').slice(1);
+        if (location.hash === '#' + id) {
+            e.preventDefault();
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+        setTimeout(function() { highlightCard(id); }, 300);
+    });
+});
+window.addEventListener('hashchange', function() { highlightCard(location.hash.slice(1)); });
+if (location.hash) highlightCard(location.hash.slice(1));
+</script>
 
 </body>
 </html>

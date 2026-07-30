@@ -51,6 +51,31 @@
         .thesis-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
         .thesis-body { font-size: 13px; color: var(--text); line-height: 1.8; }
 
+        /* What's Changed */
+        .changelog {
+            background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+            padding: 24px; margin-bottom: 32px;
+        }
+        .changelog h2 {
+            font-size: 16px; font-weight: 600; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px; color: #fff;
+        }
+        .changelog-list { list-style: none; }
+        .changelog-item {
+            display: flex; gap: 12px; padding: 8px 0;
+            border-bottom: 1px solid var(--border); font-size: 13px; align-items: flex-start;
+        }
+        .changelog-item:last-child { border-bottom: none; }
+        .changelog-tag {
+            font-size: 10px; padding: 2px 8px; border-radius: 6px; font-weight: 700;
+            white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+        }
+        .tag-new { background: rgba(34,197,94,0.15); color: var(--accent2); }
+        .tag-updated { background: rgba(79,140,255,0.15); color: var(--accent); }
+        .tag-catalyst { background: rgba(239,68,68,0.15); color: var(--danger); }
+        .changelog-desc { color: var(--muted); }
+        .changelog-desc strong { color: var(--text); }
+
         /* KPI Strip */
         .kpi-strip {
             display: flex; gap: 10px; margin-bottom: 32px;
@@ -253,20 +278,67 @@
     <div class="header">
         <div>
             <h1><span>SMFG</span> Earnings &amp; Rate Sensitivity Monitor</h1>
-            <div class="header-subtitle">Sumitomo Mitsui Financial Group (TSE: 8316) &mdash; Japan Megabank &mdash; &yen;1.7tn net income target</div>
+            <div class="header-subtitle">Sumitomo Mitsui Financial Group (TSE: 8316) &mdash; Japan Megabank &mdash; &yen;1.7tn net income target (FY3/27)</div>
         </div>
         <div class="header-right">
-            <div class="last-checked">Last checked: <strong>29 Jul 2026</strong></div>
+            <div class="last-checked">Last checked: <strong>30 Jul 2026</strong></div>
             <div class="last-checked">Conclusion: <strong class="hold">HOLD</strong></div>
         </div>
     </div>
 
     <!-- THESIS BANNER -->
     <div class="thesis-banner">
-        <div class="thesis-title">Investment Thesis: Strong fundamentals, rich valuation</div>
+        <div class="thesis-title">Investment Thesis: Record earnings confirmed, valuation stretched further</div>
         <div class="thesis-body">
-            Record EPS &yen;412, ROE 10%, and BOJ rate tailwind drive earnings momentum. H1 guidance revision &ldquo;highly likely&rdquo; upward. But at <strong>1.8x P/TBV and 15x P/E</strong> (to 3/27) the stock prices in a lot of good news. HOLD &mdash; waiting for either a de-rating or an acceleration in shareholder returns to shift to BUY. Key catalyst: H1 results (Nov 2026) for buyback top-up and guidance upgrade.
+            FY3/26 delivered record net income &yen;1.58tn (+34% YoY), ROE 10.4%, EPS &yen;412. BOJ hiked to 1.00% in June &mdash; highest since 1995 &mdash; and NII tailwind is materialising. FY3/27 guidance &yen;1.7tn with new mid-term plan targeting ROTE 13% and NI &yen;2tn by FY3/29. But the stock hit an <strong>all-time high &yen;7,161</strong> (market cap &yen;26.8tn, +86% YoY) and trades at rich multiples. HOLD &mdash; fundamentals excellent but valuation leaves no margin of safety. Key catalyst: <strong>Q1 FY3/27 results due 31 Jul</strong>.
         </div>
+    </div>
+
+    <!-- WHAT'S CHANGED -->
+    <div class="changelog">
+        <h2><span class="icon">&#9889;</span> What's Changed <span class="card-badge badge-info">30 JUL 2026</span></h2>
+        <ul class="changelog-list">
+            <li class="changelog-item">
+                <span class="changelog-tag tag-catalyst">CATALYST</span>
+                <div class="changelog-desc"><strong>Q1 FY3/27 results due 31 Jul</strong> &mdash; tomorrow. First read on whether &yen;1.7tn target is conservative. Watch for buyback top-up signal</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-updated">UPDATED</span>
+                <div class="changelog-desc"><strong>BOJ hiked to 1.00%</strong> (16 Jun) &mdash; highest since 1995. 7-1 vote. Deputy Gov Uchida led presser (Ueda hospitalised). Jul 31 meeting expected to hold. Next hike likely Q4</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-updated">UPDATED</span>
+                <div class="changelog-desc"><strong>FY3/26 record results confirmed</strong> &mdash; NI &yen;1.58tn (+34% YoY, beat &yen;1.5tn target). ROE 10.4%. EPS &yen;412. DPS &yen;157. Ordinary profit +34% to &yen;2.3tn</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-new">NEW</span>
+                <div class="changelog-desc"><strong>New mid-term plan (FY3/27&ndash;29)</strong> &mdash; ROTE 13% by FY3/29 (milestone to 15%), NI &yen;2tn target. Macro assumptions: BOJ 1.25%, US 3.0%, USD/JPY 150</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-updated">UPDATED</span>
+                <div class="changelog-desc"><strong>Buyback &yen;180bn ~60% complete</strong> &mdash; &yen;108.5bn spent by 30 Jun (17.6m of 40m shares). Program ends 31 Jul. Cancellation 20 Aug</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-new">NEW</span>
+                <div class="changelog-desc"><strong>2-for-1 stock split</strong> approved at AGM (26 Jun). Effective 1 Oct 2026, record date 30 Sep. ADR ratio changes to 1:1.2</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-updated">UPDATED</span>
+                <div class="changelog-desc"><strong>Jefferies stake creeping higher</strong> &mdash; $310m purchased May, $319m purchased Jul. Takeover task force formed but &ldquo;no immediate plan.&rdquo; JEF now at $55.80, mkt cap $12.9bn</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-new">NEW</span>
+                <div class="changelog-desc"><strong>Shareholder benefit program</strong> launched &mdash; V POINTs, higher deposit rates, event invitations tied to Olive accounts. First record date 30 Sep 2026</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-new">NEW</span>
+                <div class="changelog-desc"><strong>Fiserv/Clover partnership</strong> &mdash; bringing Clover payments platform to Japan SMBs via SMCC. Localised launch late 2026</div>
+            </li>
+            <li class="changelog-item">
+                <span class="changelog-tag tag-updated">UPDATED</span>
+                <div class="changelog-desc"><strong>Stock at all-time high</strong> &mdash; &yen;7,161 (ATH 15 Jul). Market cap &yen;26.8tn. 1yr total return +86%. Valuation increasingly stretched</div>
+            </li>
+        </ul>
     </div>
 
     <!-- KPI STRIP -->
@@ -275,12 +347,12 @@
         <a href="#valuation" class="kpi-card">
             <div class="kpi-label">Net Income Target</div>
             <div class="kpi-value" style="color:var(--accent2);">&yen;1.7tn</div>
-            <div class="kpi-sub">FY to 3/27 &mdash; upgrade likely at H1</div>
+            <div class="kpi-sub">FY3/27 &mdash; Q1 results 31 Jul</div>
         </a>
         <a href="#valuation" class="kpi-card">
-            <div class="kpi-label">ROE</div>
-            <div class="kpi-value" style="color:var(--accent2);">10%</div>
-            <div class="kpi-sub">Record level, target 15% domestic</div>
+            <div class="kpi-label">ROE (3/26)</div>
+            <div class="kpi-value" style="color:var(--accent2);">10.4%</div>
+            <div class="kpi-sub">Record &mdash; target ROTE 13% by 3/29</div>
         </a>
         <a href="#valuation" class="kpi-card">
             <div class="kpi-label">EPS (3/26)</div>
@@ -288,29 +360,29 @@
             <div class="kpi-sub">Record &mdash; all-time high</div>
         </a>
         <a href="#returns" class="kpi-card">
-            <div class="kpi-label">Dividend</div>
+            <div class="kpi-label">DPS (3/27F)</div>
             <div class="kpi-value" style="color:var(--gold);">&yen;180</div>
-            <div class="kpi-sub">40% payout ratio, to 3/27</div>
+            <div class="kpi-sub">40% payout &mdash; pre-split</div>
         </a>
         <a href="#valuation" class="kpi-card">
             <div class="kpi-label">P/TBV</div>
-            <div class="kpi-value" style="color:var(--warn);">1.8x</div>
-            <div class="kpi-sub">Elevated for Japan megabank</div>
+            <div class="kpi-value" style="color:var(--warn);">~2.0x</div>
+            <div class="kpi-sub">Near SELL trigger</div>
         </a>
         <a href="#valuation" class="kpi-card">
             <div class="kpi-label">P/E (3/27E)</div>
-            <div class="kpi-value" style="color:var(--warn);">15x</div>
-            <div class="kpi-sub">Prices in significant momentum</div>
+            <div class="kpi-value" style="color:var(--warn);">~16x</div>
+            <div class="kpi-sub">At ATH &yen;7,161</div>
         </a>
         <a href="#capital" class="kpi-card">
             <div class="kpi-label">CET1 Ratio</div>
-            <div class="kpi-value" style="color:var(--accent);">10.3%</div>
-            <div class="kpi-sub">Target ~10.5%</div>
+            <div class="kpi-value" style="color:var(--accent);">12.4%</div>
+            <div class="kpi-sub">Basel III fully loaded</div>
         </a>
         <a href="#returns" class="kpi-card">
             <div class="kpi-label">Buyback (3/27)</div>
             <div class="kpi-value" style="color:var(--accent);">&yen;180bn</div>
-            <div class="kpi-sub">Top-up likely at H1</div>
+            <div class="kpi-sub">~60% complete</div>
         </a>
     </div>
 
@@ -320,14 +392,14 @@
         <a href="#boj" class="summary-tile">
             <div class="summary-tile-icon">&#127980;</div>
             <div class="summary-tile-title">BOJ Rate Sensitivity</div>
-            <div class="summary-tile-stat" style="color:var(--accent2);">+&yen;110bn</div>
-            <div class="summary-tile-sub">Per +25bp hike</div>
+            <div class="summary-tile-stat" style="color:var(--accent2);">1.00%</div>
+            <div class="summary-tile-sub">Hiked Jun &mdash; highest since '95</div>
         </a>
         <a href="#returns" class="summary-tile">
             <div class="summary-tile-icon">&#128176;</div>
             <div class="summary-tile-title">Shareholder Returns</div>
             <div class="summary-tile-stat" style="color:var(--gold);">&yen;180 + &yen;180bn</div>
-            <div class="summary-tile-sub">DPS + buyback</div>
+            <div class="summary-tile-sub">DPS + buyback (60% done)</div>
         </a>
         <a href="#loans" class="summary-tile">
             <div class="summary-tile-icon">&#128200;</div>
@@ -344,14 +416,14 @@
         <a href="#deposits" class="summary-tile">
             <div class="summary-tile-icon">&#127974;</div>
             <div class="summary-tile-title">Deposits</div>
-            <div class="summary-tile-stat" style="color:var(--accent2);">+&yen;7tn</div>
-            <div class="summary-tile-sub">Target, Q1 ahead</div>
+            <div class="summary-tile-stat" style="color:var(--accent2);">&yen;202tn</div>
+            <div class="summary-tile-sub">Total deposits at 3/26</div>
         </a>
         <a href="#olive" class="summary-tile">
             <div class="summary-tile-icon">&#128241;</div>
             <div class="summary-tile-title">Olive Digital</div>
-            <div class="summary-tile-stat" style="color:var(--gold);">7.5m</div>
-            <div class="summary-tile-sub">Accounts &rarr; 15m target</div>
+            <div class="summary-tile-stat" style="color:var(--gold);">Scaling</div>
+            <div class="summary-tile-sub">Shareholder perks launched</div>
         </a>
         <a href="#securities" class="summary-tile">
             <div class="summary-tile-icon">&#128203;</div>
@@ -362,14 +434,14 @@
         <a href="#capital" class="summary-tile">
             <div class="summary-tile-icon">&#127975;</div>
             <div class="summary-tile-title">Capital</div>
-            <div class="summary-tile-stat" style="color:var(--accent);">10.3%</div>
-            <div class="summary-tile-sub">CET1, target ~10.5%</div>
+            <div class="summary-tile-stat" style="color:var(--accent);">12.4%</div>
+            <div class="summary-tile-sub">CET1 &mdash; well above min</div>
         </a>
         <a href="#jefferies" class="summary-tile">
             <div class="summary-tile-icon">&#127758;</div>
             <div class="summary-tile-title">Jefferies</div>
-            <div class="summary-tile-stat" style="color:var(--accent);">20%</div>
-            <div class="summary-tile-sub">Stake, full ownership aim</div>
+            <div class="summary-tile-stat" style="color:var(--warn);">Creeping</div>
+            <div class="summary-tile-sub">$629m added May+Jul</div>
         </a>
         <a href="#aviation" class="summary-tile">
             <div class="summary-tile-icon">&#9992;</div>
@@ -386,8 +458,8 @@
         <a href="#valuation" class="summary-tile">
             <div class="summary-tile-icon">&#128178;</div>
             <div class="summary-tile-title">Valuation</div>
-            <div class="summary-tile-stat" style="color:var(--warn);">1.8x P/TBV</div>
-            <div class="summary-tile-sub">Rich &mdash; HOLD</div>
+            <div class="summary-tile-stat" style="color:var(--danger);">~2.0x P/TBV</div>
+            <div class="summary-tile-sub">ATH &mdash; stretched</div>
         </a>
     </div>
 
@@ -399,19 +471,20 @@
             <h2><span class="icon">&#127980;</span> BOJ Rate Sensitivity <span class="card-badge badge-bullish">TAILWIND</span></h2>
             <div class="card-content">
                 <ul>
-                    <li><strong>+25bp rate hike = &yen;110bn NII uplift</strong> (revised up from &yen;100bn)</li>
-                    <li>Impact rises to <strong>&yen;150bn by year 5</strong> as fixed-rate loans reprice</li>
-                    <li>Management view: BOJ is &ldquo;behind the curve&rdquo; on normalisation</li>
+                    <li><strong>BOJ hiked to 1.00%</strong> on 16 Jun 2026 &mdash; highest since 1995. 7-1 vote (Asada dissented)</li>
+                    <li>Deputy Gov Uchida led presser (Ueda hospitalised) &mdash; <strong>no fresh hawkish signal</strong></li>
+                    <li>Jul 30&ndash;31 meeting <strong>expected to hold</strong> at 1.00%. Next hike likely Q4 2026</li>
+                    <li><strong>+25bp rate hike = &yen;110bn NII uplift</strong> (revised up from &yen;100bn). Year 5 = &yen;150bn</li>
+                    <li>Mid-term plan macro assumption: <strong>BOJ rate 1.25%</strong> &mdash; implies one more hike expected</li>
                     <li>Deposit beta: <strong>40% overall, 20% on time deposits</strong> &mdash; low pass-through protects NIM</li>
-                    <li>Further upside from loan volume growth + spread expansion</li>
                 </ul>
                 <table class="sens-table">
-                    <tr><th>BOJ Rate Move</th><th>NII Impact (Yr 1)</th><th>NII Impact (Yr 5)</th></tr>
-                    <tr><td>+25bp</td><td class="sens-positive">+&yen;110bn</td><td class="sens-positive">+&yen;150bn</td></tr>
-                    <tr><td>+50bp</td><td class="sens-positive">+&yen;220bn</td><td class="sens-positive">+&yen;300bn</td></tr>
-                    <tr><td>+100bp</td><td class="sens-positive">+&yen;440bn</td><td class="sens-positive">+&yen;600bn</td></tr>
+                    <tr><th>BOJ Rate</th><th>Status</th><th>NII Impact (Yr 1)</th></tr>
+                    <tr><td>0.75% &rarr; 1.00%</td><td class="sens-positive">DONE (Jun 2026)</td><td class="sens-positive">+&yen;110bn</td></tr>
+                    <tr><td>1.00% &rarr; 1.25%</td><td style="color:var(--warn);">Expected (Q4?)</td><td class="sens-positive">+&yen;110bn</td></tr>
+                    <tr><td>1.25% &rarr; 1.50%</td><td style="color:var(--muted);">Possible 2027</td><td class="sens-positive">+&yen;110bn</td></tr>
                 </table>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> BOJ policy rate decisions, Ueda speeches, deposit beta changes</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> BOJ Jul 31 decision, Ueda health/return, deposit beta changes, Fed rate divergence</div>
             </div>
         </div>
 
@@ -420,14 +493,14 @@
             <h2><span class="icon">&#128176;</span> Shareholder Returns <span class="card-badge badge-watching">WATCHING</span></h2>
             <div class="card-content">
                 <ul>
-                    <li><strong>Dividend:</strong> &yen;180/share forecast (40% payout on &yen;1.7tn target)</li>
-                    <li><strong>Buyback:</strong> &yen;180bn announced for 3/27 (down from &yen;250bn in 3/26)</li>
-                    <li><strong>Additional buybacks likely</strong> &mdash; monitoring geopolitics (Middle East) before deciding</li>
-                    <li>Buyback top-up decision at <strong>H1 results</strong></li>
-                    <li>No major M&amp;A planned &mdash; open to selective bolt-ons only</li>
-                    <li>If guidance upgrades at H1, dividend could rise above &yen;180</li>
+                    <li><strong>DPS FY3/26 actual:</strong> &yen;157. <strong>FY3/27 forecast:</strong> &yen;180 (40% payout on &yen;1.7tn target)</li>
+                    <li><strong>Buyback:</strong> &yen;180bn approved (May&ndash;Jul 2026). <strong>~60% complete</strong> (&yen;108.5bn / 17.6m shares by 30 Jun)</li>
+                    <li>Buyback program ends <strong>31 Jul</strong>. Shares cancelled <strong>20 Aug</strong></li>
+                    <li><strong>2-for-1 stock split</strong> effective 1 Oct 2026 (record date 30 Sep). Post-split DPS &yen;90</li>
+                    <li><strong>Shareholder benefit program</strong> launched &mdash; V POINTs, +1.0% deposit rate, event invitations tied to Olive accounts</li>
+                    <li>Additional buyback top-up possible at <strong>H1 results (Nov)</strong> depending on Middle East</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> H1 buyback announcement, payout ratio, Middle East situation</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Buyback completion 31 Jul, H1 buyback top-up, stock split execution, benefit program uptake</div>
             </div>
         </div>
 
@@ -436,14 +509,15 @@
             <h2><span class="icon">&#128200;</span> Loan Growth &amp; Spreads <span class="card-badge badge-bullish">POSITIVE</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>27% loan growth over 3 years &rarr; moderating to <strong>~10% next 3 years</strong></li>
+                    <li>Total loans at 3/26: <strong>&yen;130.5tn</strong>. 27% growth over 3 years &rarr; moderating to <strong>~10% next 3 years</strong></li>
                     <li>Large corporates: +17% (now ~40% of domestic loans). SME: +7%. Individuals: -1%</li>
                     <li>Domestic spreads down 5bp to <strong>54bp</strong> on large corporate &mdash; management says <strong>bottomed</strong></li>
                     <li>Margin compression driven by low-margin bridge loans (Toyota, Sony) &mdash; will decline</li>
                     <li>Bridge loans generate spin-off revenue: FX, advisory fees</li>
                     <li>Overseas: restructuring to lift ROE from 6-7% to <strong>&ge;10%</strong>. Disposed railcar business, cutting US/EU costs</li>
+                    <li><strong>SMFG targeting sales &amp; trading revenue doubling to &yen;800bn</strong></li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Quarterly loan growth, NIM/spread trends, overseas ROE improvement</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Q1 loan growth, NIM/spread trends, overseas ROE improvement</div>
             </div>
         </div>
 
@@ -452,14 +526,15 @@
             <h2><span class="icon">&#9888;</span> Credit Costs <span class="card-badge badge-risk">RISK</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>Forecast <strong>&yen;340bn</strong> (up from original &yen;300bn). Normalised ~&yen;300bn/year</li>
+                    <li>FY3/26 actual: <strong>&yen;340bn</strong> (up from original &yen;300bn forecast). NPL ratio: <strong>0.97%</strong></li>
                     <li>Gradual increase expected from <strong>Asian consumer credit</strong></li>
-                    <li><strong>Middle East:</strong> &yen;65bn provisions + &yen;100bn forward-looking. Exposure: &yen;3.5tn</li>
+                    <li><strong>Middle East:</strong> &yen;65bn provisions + &yen;100bn forward-looking. Exposure: &yen;3.5tn. Iran war ongoing</li>
                     <li><strong>Private credit:</strong> &yen;1.2tn (&lt;1% of group exposure)</li>
-                    <li><strong>AI/datacentre exposure:</strong> &yen;4tn</li>
+                    <li><strong>AI/datacentre exposure:</strong> &yen;4tn &mdash; seeking to offload portions of AI-driven data centre debt</li>
                     <li>SME lending focused on mid-sized enterprises, not micro (less risky)</li>
+                    <li>Total coverage for NPLs: <strong>&yen;937.5bn</strong></li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Quarterly credit cost charge, Middle East developments, Asian consumer NPLs</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Q1 credit cost charge, Middle East developments, AI/datacentre concentration risk</div>
             </div>
         </div>
 
@@ -468,12 +543,12 @@
             <h2><span class="icon">&#127974;</span> Deposits <span class="card-badge badge-bullish">POSITIVE</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>Target: <strong>+&yen;7tn deposit growth</strong> to 3/27</li>
-                    <li>Q1 growth <strong>exceeded expectations</strong></li>
+                    <li>Total deposits at 3/26: <strong>&yen;201.9tn</strong></li>
                     <li>Retail 46% / Corporate 54%. Corporate deposits +5% YoY</li>
                     <li>Gaining share from regional banks</li>
                     <li>Issued straight bonds for first time in 12 years &mdash; diversifying funding</li>
                     <li>Deposit beta 40% = strong NII protection as rates rise</li>
+                    <li>Shareholder benefit program offers <strong>+1.0% on 3-month time deposits</strong> &mdash; deposit-gathering tool</li>
                 </ul>
                 <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Quarterly deposit flows, deposit beta changes, regional bank market share</div>
             </div>
@@ -484,13 +559,15 @@
             <h2><span class="icon">&#128241;</span> Olive (Digital Banking) <span class="card-badge badge-watching">SCALING</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>Accounts: <strong>7.5m now</strong> &rarr; target <strong>15m by 3/29</strong></li>
+                    <li>Target <strong>12m accounts</strong> + 5m new cardholders/year over 5 years</li>
                     <li>50% existing SMBC customers, <strong>50% entirely new</strong></li>
                     <li>Net business profit: &yen;20bn (3/26) &rarr; <strong>&yen;110bn target (3/29)</strong></li>
-                    <li>Key driver of retail deposit gathering and market share gains</li>
-                    <li>Linked to Visa partnership (dates to 1958, Visa stake &gt;&yen;1tn)</li>
+                    <li><strong>SBI wealth management JV</strong> launched &mdash; AI advisory, multi-bank asset visualisation via Money Forward</li>
+                    <li><strong>Shareholder benefit program</strong> directly ties perks to Olive account ownership &mdash; drives adoption</li>
+                    <li><strong>Fiserv/Clover partnership</strong> &mdash; bringing Clover payments to Japan SMBs via SMCC, launch late 2026</li>
+                    <li>World-first Visa <strong>Flexible Credential</strong> &mdash; consolidate up to 5 credit cards into one Olive card</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Quarterly account growth, new-to-bank %, profit trajectory vs &yen;110bn target</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Account growth at Q1, SBI JV traction, Clover launch progress, benefit program uptake</div>
             </div>
         </div>
 
@@ -512,31 +589,34 @@
 
         <!-- Capital & RWAs -->
         <div class="card" id="capital">
-            <h2><span class="icon">&#127975;</span> Capital &amp; Allocation <span class="card-badge badge-info">ADEQUATE</span></h2>
+            <h2><span class="icon">&#127975;</span> Capital &amp; Allocation <span class="card-badge badge-bullish">STRONG</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>CET1: <strong>10.3%</strong> (Basel III final, ex unrealised gains). Target ~10.5%</li>
+                    <li>CET1: <strong>12.4%</strong> (Basel III fully loaded, Mar 2026). Well above 8.19% minimum</li>
+                    <li>Total capital ratio: <strong>15.7%</strong>. Tier 1: <strong>14.5%</strong></li>
                     <li>RWA growth: <strong>~5%</strong> over next 3 years</li>
                     <li>Shifting RWAs to domestic business &rarr; profit mix moving to <strong>65/35 domestic/overseas</strong></li>
-                    <li>IT budget: &yen;800bn &rarr; <strong>&yen;1tn</strong>. &yen;100bn AI-related, 60% cybersecurity</li>
-                    <li>40% dividend payout + buybacks + organic growth within CET1 target</li>
+                    <li>IT budget: &yen;800bn &rarr; <strong>&yen;1tn</strong>. &yen;100bn AI-related. OpenAI GPT-5.5 deployed for cybersecurity</li>
+                    <li>40% dividend payout + buybacks + organic growth within capital framework</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> CET1 trajectory, RWA growth vs target, capital allocation changes</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> CET1 trajectory, RWA growth vs target, capital allocation at Q1</div>
             </div>
         </div>
 
         <!-- Jefferies -->
         <div class="card" id="jefferies">
-            <h2><span class="icon">&#127758;</span> Jefferies Partnership <span class="card-badge badge-info">LONG-TERM</span></h2>
+            <h2><span class="icon">&#127758;</span> Jefferies Partnership <span class="card-badge badge-watching">ESCALATING</span></h2>
             <div class="card-content">
                 <ul>
-                    <li>Announced <strong>20% stake</strong> in Jefferies</li>
-                    <li>Ambition: <strong>full ownership</strong> over time &mdash; expected to be lengthy process</li>
+                    <li>Original <strong>~20% stake</strong>. Ambition: <strong>full ownership</strong> over time</li>
+                    <li><strong>May 2026:</strong> acquired $310m (6.4m shares at $48.22)</li>
+                    <li><strong>Jul 2026:</strong> acquired $319m (5.9m shares at $53.96). JEF now at <strong>$55.80</strong>, mkt cap $12.9bn</li>
+                    <li><strong>Takeover task force</strong> formed (Mar 2026 FT report) &mdash; but officially &ldquo;no immediate plan&rdquo;</li>
+                    <li>Full acquisition would cost <strong>$10.5&ndash;11bn</strong> at 30-40% premium. Cultural integration risk flagged by analysts</li>
                     <li>Federal Reserve regulations constrain pace of stake increase</li>
-                    <li>Next 2 years: due diligence, management assessment, integration planning</li>
-                    <li>Strategic rationale: global investment banking platform + multi-franchise Asia strategy</li>
+                    <li>SMFG has board seat. JV in Japan + collaboration in leveraged finance</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Fed regulatory changes, Jefferies financial performance, stake increase announcements</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Further stock purchases, Fed regulatory changes, JEF financial performance, integration signals</div>
             </div>
         </div>
 
@@ -559,13 +639,15 @@
             <h2><span class="icon">&#127757;</span> Macro / Geopolitical <span class="card-badge badge-watching">WATCHING</span></h2>
             <div class="card-content">
                 <ul>
+                    <li><strong>BOJ at 1.00%:</strong> rate normalisation well underway. Mid-term plan assumes 1.25% &mdash; one more hike baked in</li>
                     <li><strong>Yen weakness drivers:</strong> retail flows to US equities, corporate US investment, AI payments to US data centres, Trump $550bn trade deal</li>
-                    <li><strong>Middle East:</strong> gating factor for additional buybacks. &yen;3.5tn exposure, &yen;165bn total provisions</li>
+                    <li><strong>Middle East / Iran war:</strong> gating factor for additional buybacks. &yen;3.5tn exposure, &yen;165bn total provisions</li>
                     <li><strong>US tariffs:</strong> &yen;100bn assumed negative impact did <strong>not materialise</strong></li>
-                    <li><strong>PM Takaichi:</strong> &ldquo;pro-growth&rdquo; assessment, positive for banks. Initial team &ldquo;na&iuml;ve&rdquo; on fiscal/debt but &ldquo;learning quickly&rdquo;</li>
+                    <li><strong>PM Takaichi:</strong> &ldquo;pro-growth&rdquo; assessment, positive for banks</li>
                     <li><strong>China:</strong> reduced exposure over 5 years. Open to fee-based expansion, cautious on loans</li>
+                    <li><strong>Fed decision 29 Jul</strong> (2 days before BOJ) provides context on US-Japan rate differentials</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Middle East escalation, BOJ/Fed rate divergence, yen direction, Takaichi policy</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> Middle East escalation, BOJ/Fed rate divergence, yen direction, AI/datacentre debt risks</div>
             </div>
         </div>
 
@@ -574,20 +656,22 @@
             <h2><span class="icon">&#128178;</span> Valuation <span class="card-badge badge-hold">HOLD</span></h2>
             <div class="card-content">
                 <ul>
-                    <li><strong>P/TBV: 1.8x</strong> &mdash; elevated for a Japan megabank</li>
-                    <li><strong>P/E to 3/27: 15x</strong> &mdash; prices in significant earnings momentum</li>
-                    <li>Earnings strong but <strong>&ldquo;the issue for us is the valuation&rdquo;</strong></li>
+                    <li>Share price: <strong>&yen;7,161</strong> (all-time high 15 Jul 2026). Market cap: <strong>&yen;26.8tn</strong></li>
+                    <li>1-year total shareholder return: <strong>+86%</strong>. 5-year return: <strong>~7x</strong></li>
+                    <li><strong>P/TBV: ~2.0x</strong> &mdash; approaching SELL trigger (&gt;2.0x without earnings upgrade)</li>
+                    <li><strong>P/E to 3/27: ~16x</strong> &mdash; prices in significant earnings momentum</li>
+                    <li>Simply Wall St fair value estimate &yen;10,059 (28% upside) &mdash; but only passes 2 of 6 valuation checks</li>
+                    <li>Analyst consensus: <strong>Buy</strong> (12 analysts), 12-month target <strong>&yen;6,590</strong> (-8% from current)</li>
                     <li>Hold until either: (a) valuation de-rates to &lt;1.3x P/TBV, or (b) shareholder returns accelerate materially</li>
-                    <li>Compare: MUFG (8306) and Mizuho (8411) multiples for relative value</li>
                 </ul>
-                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> P/TBV vs megabank peers, P/E to forward earnings, any share price weakness creating entry</div>
+                <div style="margin-top: 8px; font-size: 12px;"><strong>Monitor:</strong> P/TBV vs 2.0x SELL trigger, analyst target revisions post-Q1, peer relative value</div>
             </div>
         </div>
     </div>
 
     <!-- EARNINGS BRIDGE -->
     <div class="card card-full">
-        <h2><span class="icon">&#128202;</span> Earnings Bridge: What Drives the Upgrade</h2>
+        <h2><span class="icon">&#128202;</span> Earnings Bridge: FY3/26 Actual &rarr; FY3/27 Target</h2>
         <div style="overflow-x: auto;">
             <table class="data-table">
                 <thead>
@@ -601,17 +685,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>BOJ rate hike</strong></td>
+                        <td><strong>BOJ rate at 1.00%</strong></td>
                         <td style="color:var(--accent2);">&#9650; Positive</td>
-                        <td>&yen;110bn per +25bp</td>
-                        <td>Management says BOJ &ldquo;behind the curve&rdquo;. Impact revised up. Year 5 = &yen;150bn</td>
+                        <td>+&yen;110bn per +25bp</td>
+                        <td>Jun hike already flowing through. Mid-term plan assumes 1.25%. NII tailwind confirmed</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span></span></td>
                     </tr>
                     <tr>
                         <td><strong>US tariff non-impact</strong></td>
                         <td style="color:var(--accent2);">&#9650; Positive</td>
                         <td>&yen;100bn not lost</td>
-                        <td>Conservative assumption did not materialise. Releases buffer for guidance upgrade</td>
+                        <td>Conservative assumption did not materialise. Buffer released into guidance</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span></span></td>
                     </tr>
                     <tr>
@@ -622,45 +706,45 @@
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span></span></td>
                     </tr>
                     <tr>
-                        <td><strong>Spread stabilisation</strong></td>
+                        <td><strong>Sales &amp; trading doubling</strong></td>
                         <td style="color:var(--accent2);">&#9650; Positive</td>
-                        <td>Bottom at 54bp</td>
-                        <td>Management says compression bottomed as bridge loans decline. Spin-off fees offset</td>
+                        <td>&yen;400bn &rarr; &yen;800bn</td>
+                        <td>New mid-term plan target. Leveraging Jefferies partnership</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span><span class="signal-bar"></span></span></td>
                     </tr>
                     <tr>
-                        <td><strong>Olive growth</strong></td>
+                        <td><strong>Olive &amp; digital</strong></td>
                         <td style="color:var(--accent2);">&#9650; Positive</td>
                         <td>&yen;20bn &rarr; &yen;110bn</td>
-                        <td>7.5m accounts, 50% new-to-bank. Long runway but early stage</td>
+                        <td>SBI JV, Fiserv/Clover, shareholder benefit program all driving adoption</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span><span class="signal-bar"></span></span></td>
                     </tr>
                     <tr>
                         <td><strong>Credit cost creep</strong></td>
                         <td style="color:var(--danger);">&#9660; Negative</td>
-                        <td>&yen;300bn &rarr; &yen;340bn</td>
-                        <td>Asian consumer credit, Middle East provisions. Manageable but trending up</td>
+                        <td>&yen;340bn actual</td>
+                        <td>Asian consumer credit, Middle East provisions. NPL ratio 0.97%. Manageable</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span></span></td>
                     </tr>
                     <tr>
-                        <td><strong>Middle East risk</strong></td>
+                        <td><strong>Middle East / Iran war</strong></td>
                         <td style="color:var(--danger);">&#9660; Negative</td>
                         <td>&yen;3.5tn exposure</td>
-                        <td>&yen;165bn total provisions. Gating buyback decisions. Tail risk</td>
+                        <td>&yen;165bn total provisions. Ongoing conflict. Gating buyback decisions</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span><span class="signal-bar"></span></span></td>
                     </tr>
                     <tr>
-                        <td><strong>Bond portfolio duration</strong></td>
+                        <td><strong>AI/datacentre concentration</strong></td>
                         <td style="color:var(--warn);">&#9679; Mixed</td>
-                        <td>1.0yr &rarr; 3.9yr</td>
-                        <td>Benefits if yields rise further but unrealised losses (&yen;559bn) could grow. Equity gains &yen;2.5tn provide buffer</td>
+                        <td>&yen;4tn exposure</td>
+                        <td>Seeking to offload portions. Growth opportunity but concentration risk emerging</td>
                         <td><span class="signal-strength"><span class="signal-bar on"></span><span class="signal-bar on"></span><span class="signal-bar"></span><span class="signal-bar"></span></span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div style="margin-top: 12px; font-size: 13px; color: var(--accent2); font-weight: 600;">
-            Net assessment: H1 guidance upgrade &ldquo;highly likely&rdquo; &mdash; tariff buffer + rate tailwind + strong franchise performance
+            FY3/26: &yen;1.58tn actual (+34% YoY) &rarr; FY3/27: &yen;1.7tn target (+8%). Conservative &mdash; Q1 results (31 Jul) likely to show upside
         </div>
     </div>
 
@@ -669,33 +753,48 @@
         <h2><span class="icon">&#128197;</span> Key Dates &amp; Catalysts</h2>
         <ul class="catalyst-list">
             <li class="catalyst-item">
-                <div class="catalyst-date">Jul 2026</div>
-                <div class="catalyst-desc"><strong>BOJ policy meeting</strong> &mdash; next rate decision. Any hike = direct NII uplift. Watch Ueda forward guidance</div>
-                <div class="catalyst-urgency urgency-imminent">IMMINENT</div>
+                <div class="catalyst-date">31 Jul 2026</div>
+                <div class="catalyst-desc"><strong>Q1 FY3/27 results</strong> &mdash; first read on &yen;1.7tn target. Buyback program also ends. Watch for guidance commentary and top-up signals</div>
+                <div class="catalyst-urgency urgency-imminent">TOMORROW</div>
             </li>
             <li class="catalyst-item">
-                <div class="catalyst-date">Nov 2026</div>
-                <div class="catalyst-desc"><strong>SMFG H1 results (to Sep 2026)</strong> &mdash; guidance upgrade likely. Additional buyback decision. Dividend revision possible. Key catalyst for hold/buy decision</div>
+                <div class="catalyst-date">31 Jul 2026</div>
+                <div class="catalyst-desc"><strong>BOJ policy meeting</strong> (30&ndash;31 Jul) &mdash; expected to hold at 1.00%. Outlook Report with updated projections. Watch for hawkish language on next hike timing</div>
+                <div class="catalyst-urgency urgency-imminent">TOMORROW</div>
+            </li>
+            <li class="catalyst-item">
+                <div class="catalyst-date">20 Aug 2026</div>
+                <div class="catalyst-desc"><strong>Buyback share cancellation</strong> &mdash; all repurchased shares cancelled, reducing issued count</div>
                 <div class="catalyst-urgency urgency-near">NEAR TERM</div>
             </li>
             <li class="catalyst-item">
-                <div class="catalyst-date">Quarterly</div>
-                <div class="catalyst-desc"><strong>BOJ policy rate decisions</strong> &mdash; each +25bp = &yen;110bn NII uplift. Management says BOJ &ldquo;behind the curve&rdquo;</div>
-                <div class="catalyst-urgency urgency-near">RECURRING</div>
+                <div class="catalyst-date">30 Sep 2026</div>
+                <div class="catalyst-desc"><strong>Stock split record date</strong> &mdash; must hold shares by this date for 2-for-1 split. First shareholder benefit program record date</div>
+                <div class="catalyst-urgency urgency-near">NEAR TERM</div>
+            </li>
+            <li class="catalyst-item">
+                <div class="catalyst-date">1 Oct 2026</div>
+                <div class="catalyst-desc"><strong>2-for-1 stock split effective</strong> &mdash; share price halves, ADR ratio changes to 1:1.2. May attract retail investors</div>
+                <div class="catalyst-urgency urgency-near">NEAR TERM</div>
+            </li>
+            <li class="catalyst-item">
+                <div class="catalyst-date">Nov 2026</div>
+                <div class="catalyst-desc"><strong>SMFG H1 results (to Sep 2026)</strong> &mdash; guidance upgrade likely. Buyback top-up decision. Dividend revision possible. Key catalyst for hold/buy decision</div>
+                <div class="catalyst-urgency urgency-near">NEAR TERM</div>
+            </li>
+            <li class="catalyst-item">
+                <div class="catalyst-date">Q4 2026</div>
+                <div class="catalyst-desc"><strong>Next BOJ rate hike</strong> (expected) &mdash; to 1.25% (mid-term plan assumption). Each +25bp = &yen;110bn NII uplift</div>
+                <div class="catalyst-urgency urgency-near">NEAR TERM</div>
             </li>
             <li class="catalyst-item">
                 <div class="catalyst-date">Ongoing</div>
-                <div class="catalyst-desc"><strong>Jefferies due diligence</strong> &mdash; 2-year management assessment before further stake increase. Watch for Fed regulatory changes</div>
-                <div class="catalyst-urgency urgency-medium">MEDIUM TERM</div>
-            </li>
-            <li class="catalyst-item">
-                <div class="catalyst-date">3/27</div>
-                <div class="catalyst-desc"><strong>Olive milestone check</strong> &mdash; tracking towards 15m accounts (3/29) and &yen;110bn profit. H1 will show trajectory</div>
+                <div class="catalyst-desc"><strong>Jefferies stake increase</strong> &mdash; active purchasing ($629m in May+Jul). Watch for further tranches and Fed regulatory signals</div>
                 <div class="catalyst-urgency urgency-medium">MEDIUM TERM</div>
             </li>
             <li class="catalyst-item">
                 <div class="catalyst-date">3/29</div>
-                <div class="catalyst-desc"><strong>Mid-term plan completion</strong> &mdash; deposit +&yen;7tn target, Olive 15m accounts, &yen;110bn Olive profit, overseas ROE &ge;10%</div>
+                <div class="catalyst-desc"><strong>Mid-term plan targets</strong> &mdash; ROTE 13%, NI &yen;2tn, Olive &yen;110bn profit, overseas ROE &ge;10%</div>
                 <div class="catalyst-urgency urgency-medium">LONG TERM</div>
             </li>
         </ul>
@@ -711,10 +810,10 @@
                     <ul>
                         <li>Share price de-rates to &lt;1.3x P/TBV or &lt;12x P/E &rarr; valuation gap closes</li>
                         <li>Buyback top-up at H1 takes total &gt;&yen;300bn &rarr; capital return acceleration</li>
-                        <li>BOJ hikes 50bp+ &rarr; NII uplift &yen;220bn+ not priced in</li>
-                        <li>Olive accounts &gt;10m ahead of schedule &rarr; digital franchise re-rating</li>
+                        <li>BOJ hikes to 1.25%+ &rarr; additional NII uplift not fully priced in</li>
+                        <li>Q1/H1 results materially beat &yen;1.7tn run-rate &rarr; guidance upgrade</li>
                         <li>Jefferies stake increase permitted by Fed &rarr; global IB platform narrative</li>
-                        <li>Guidance upgrade &gt;15% at H1 &rarr; EPS acceleration not reflected in multiple</li>
+                        <li>Olive account growth accelerates post-benefit-program &rarr; digital franchise re-rating</li>
                     </ul>
                 </div>
             </div>
@@ -722,13 +821,14 @@
                 <h3 style="color:var(--danger); font-size:14px; margin-bottom:12px;">HOLD &rarr; SELL triggers</h3>
                 <div class="card-content">
                     <ul>
+                        <li><strong>P/TBV &gt;2.0x without earnings upgrade &rarr; APPROACHING</strong> &mdash; monitor closely</li>
                         <li>Middle East escalation &rarr; provisions consume earnings, buyback cancelled</li>
                         <li>BOJ reverses course / rate cuts &rarr; entire NII thesis collapses</li>
                         <li>Asian consumer credit deterioration &rarr; credit costs &gt;&yen;400bn</li>
-                        <li>P/TBV &gt;2.0x without earnings upgrade &rarr; multiple overextension</li>
                         <li>Deposit beta rises above 60% &rarr; NII benefit from rate hikes eroded</li>
                         <li>Yen appreciation sharply &rarr; overseas earnings translation loss</li>
                         <li>Jefferies deal terms unfavourable / integration risk emerges</li>
+                        <li>AI/datacentre exposure loss crystallises &rarr; concentration risk realised</li>
                     </ul>
                 </div>
             </div>
@@ -752,17 +852,17 @@
                 <tbody>
                     <tr>
                         <td>ROE</td>
-                        <td><strong>10%</strong></td>
+                        <td><strong>10.4%</strong></td>
                         <td>Monitor</td>
                         <td>Monitor</td>
                         <td>SMFG leading &mdash; check if gap widens or narrows</td>
                     </tr>
                     <tr>
                         <td>P/TBV</td>
-                        <td><strong>1.8x</strong></td>
+                        <td><strong>~2.0x</strong></td>
                         <td>Monitor</td>
                         <td>Monitor</td>
-                        <td>Relative premium justified if ROE lead persists</td>
+                        <td>Premium at SELL trigger level &mdash; peer comparison critical</td>
                     </tr>
                     <tr>
                         <td>Dividend payout</td>
@@ -776,11 +876,11 @@
                         <td>40%</td>
                         <td>Monitor</td>
                         <td>Monitor</td>
-                        <td>Competitive dynamics in deposit pricing</td>
+                        <td>Competitive dynamics in deposit pricing post-1.00% rate</td>
                     </tr>
                     <tr>
                         <td>Digital banking</td>
-                        <td>Olive (7.5m)</td>
+                        <td>Olive</td>
                         <td>Monitor</td>
                         <td>Monitor</td>
                         <td>SMFG first mover &mdash; peers catching up?</td>
@@ -789,7 +889,7 @@
             </table>
         </div>
         <div style="margin-top: 12px; font-size: 12px; color: var(--muted);">
-            Peer data should be populated from latest quarterly results. SMFG premium over peers is currently justified by higher ROE and Olive optionality.
+            All three megabanks posted record profits in FY3/26. Peer data should be populated from Q1 results (all reporting late Jul). SMFG premium over peers increasingly hard to justify at ~2.0x P/TBV.
         </div>
     </div>
 
@@ -802,26 +902,30 @@
                 <div class="source-link-item"><span class="dot dot-official"></span><a href="https://www.smfg.co.jp/english/" target="_blank">SMFG &mdash; Corporate Website</a></div>
                 <div class="source-link-item"><span class="dot dot-official"></span><a href="https://www.smfg.co.jp/english/investor/" target="_blank">SMFG &mdash; Investor Relations</a></div>
                 <div class="source-link-item"><span class="dot dot-official"></span><a href="https://www.smfg.co.jp/english/investor/financial/" target="_blank">SMFG &mdash; Financial Data</a></div>
+                <div class="source-link-item"><span class="dot dot-official"></span><a href="https://www.smfg.co.jp/english/investor/financial/latest_statement/2026_3/2026_fy_e03.pdf" target="_blank">SMFG &mdash; FY3/26 Overview (PDF)</a></div>
                 <div class="source-link-item"><span class="dot dot-official"></span><a href="https://www.smfg.co.jp/english/investor/stock/" target="_blank">SMFG &mdash; Share Information</a></div>
             </div>
             <div class="source-group">
                 <h3>BOJ / Macro</h3>
                 <div class="source-link-item"><span class="dot dot-boj"></span><a href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank">BOJ &mdash; Monetary Policy Decisions</a></div>
+                <div class="source-link-item"><span class="dot dot-boj"></span><a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf" target="_blank">BOJ &mdash; Jun 2026 Rate Decision (PDF)</a></div>
                 <div class="source-link-item"><span class="dot dot-boj"></span><a href="https://www.boj.or.jp/en/statistics/index.htm" target="_blank">BOJ &mdash; Statistics</a></div>
                 <div class="source-link-item"><span class="dot dot-market"></span><a href="https://finance.yahoo.com/quote/8316.T/" target="_blank">Yahoo Finance &mdash; 8316.T</a></div>
                 <div class="source-link-item"><span class="dot dot-market"></span><a href="https://finance.yahoo.com/quote/JPY=X/" target="_blank">Yahoo Finance &mdash; USD/JPY</a></div>
             </div>
             <div class="source-group">
-                <h3>Peers</h3>
+                <h3>Peers &amp; Partners</h3>
                 <div class="source-link-item"><span class="dot dot-market"></span><a href="https://finance.yahoo.com/quote/8306.T/" target="_blank">MUFG (8306.T)</a></div>
                 <div class="source-link-item"><span class="dot dot-market"></span><a href="https://finance.yahoo.com/quote/8411.T/" target="_blank">Mizuho (8411.T)</a></div>
                 <div class="source-link-item"><span class="dot dot-news"></span><a href="https://www.jefferies.com/" target="_blank">Jefferies &mdash; Corporate</a></div>
+                <div class="source-link-item"><span class="dot dot-market"></span><a href="https://finance.yahoo.com/quote/JEF/" target="_blank">Jefferies (JEF) &mdash; Yahoo Finance</a></div>
             </div>
             <div class="source-group">
                 <h3>News / Analysis</h3>
                 <div class="source-link-item"><span class="dot dot-news"></span><a href="https://www.reuters.com/companies/8316.T/" target="_blank">Reuters &mdash; SMFG</a></div>
                 <div class="source-link-item"><span class="dot dot-news"></span><a href="https://www.nikkei.com/nkd/company/?scode=8316" target="_blank">Nikkei &mdash; 8316</a></div>
                 <div class="source-link-item"><span class="dot dot-news"></span><a href="https://asia.nikkei.com/" target="_blank">Nikkei Asia</a></div>
+                <div class="source-link-item"><span class="dot dot-news"></span><a href="https://stockanalysis.com/stocks/smfg/" target="_blank">Stock Analysis &mdash; SMFG</a></div>
             </div>
         </div>
     </div>
